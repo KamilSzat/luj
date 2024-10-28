@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="luj.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+            <DatePicker
+                x:Name="DateEntry"
+                MinimumDate="2003-02-01" />
+
+            <Entry
+                x:Name="CurrencyCodesEntry"
+                Placeholder="Wpisz kody walut (np. USD, EUR)"
+                HorizontalOptions="Fill" />
+
+            <Button
+                x:Name="FetchRatesButton"
+                Text="Pobierz kursy"
+                Clicked="OnFetchRatesClicked"
+                HorizontalOptions="Fill" />
+
+            <ListView x:Name="RatesListView" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
